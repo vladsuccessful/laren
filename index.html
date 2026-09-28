@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Людмила Ландер — консалтинг для салонів краси</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Arial, sans-serif;
+}
+
+body {
+  background: #111111;
+  color: #eeeeee;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin-bottom: 28px;
+}
+
+.hero h1 span {
+  color: #c8b89a;
+}
+
+.hero p {
+  max-width: 760px;
+  font-size: 20px;
+  color: #bdbdbd;
+  margin-bottom: 35px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 15px 28px;
+  background: #eeeeee;
+  color: #111111;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.cta:hover {
+  background: #c8b89a;
+}
+
+/* SECTION */
+
+section {
+  margin-top: 40px;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+
+/* SERVICES */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 100px;
+}
+
+.service {
+  background: #181818;
+  padding: 35px;
+  border: 1px solid #292929;
+}
+
+.service-number {
+  font-size: 13px;
+  color: #8f8f8f;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.service h3 {
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.service p {
+  color: #aaa;
+}
+
+/* FOR WHO */
+
+.audience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.audience-block {
+  padding: 35px;
+  background: #151515;
+  border-left: 3px solid #555;
+}
+
+.audience-block h3 {
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+.audience-block p {
+  color: #aaa;
+}
+
+/* ABOUT */
+
+.about {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 110px;
+}
+
+.about-photo {
+  width: 100%;
+  min-height: 400px;
+  background: #1a1a1a;
+  border: 1px solid #292929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-placeholder {
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.about h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.about p {
+  color: #bdbdbd;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+/* PROCESS */
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 100px;
+}
+
+.process-item {
+  padding: 30px;
+  background: #181818;
+}
+
+.process-item strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.process-item p {
+  color: #999;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #181818;
+  padding: 55px;
+  text-align: center;
+  border: 1px solid #292929;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.contact a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #555;
+}
+
+.contact a:hover {
+  color: #c8b89a;
+  border-bottom-color: #c8b89a;
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  margin-top: 55px;
+}
+
+.footer a {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+    padding-top: 70px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .audience {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo {
+    max-width: 330px;
+    min-height: 380px;
+    margin: auto;
+  }
+
+  .process {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    padding: 40px 25px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HERO -->
+
+<div class="container hero">
+
+  <div class="hero-content">
+
+    <h1>
+      Системний розвиток
+      <span>салону краси</span>
+      — від відкриття до стабільного прибуткового бізнесу
+    </h1>
+
+    <p>
+      Консалтинг для власників салонів краси:
+      відкриття, розвиток, маркетинг та управління.
+      Допомагаю побудувати не просто красивий салон,
+      а керований бізнес із зрозумілою економікою.
+    </p>
+
+    <a href="#contact" class="cta">
+      Обговорити мій бізнес
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<div class="container">
+
+  <h2 class="section-title">
+    З чим я допомагаю
+  </h2>
+
+  <div class="services">
+
+    <div class="service">
+
+      <div class="service-number">
+        01 / ВІДКРИТТЯ
+      </div>
+
+      <h3>
+        Відкриття салону з нуля
+      </h3>
+
+      <p>
+        Концепція, позиціонування, вибір формату,
+        планування бюджету, підбір локації,
+        формування команди та підготовка до запуску.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="service-number">
+        02 / РОЗВИТОК
+      </div>
+
+      <h3>
+        Розвиток існуючого салону
+      </h3>
+
+      <p>
+        Аналіз поточного стану бізнесу,
+        пошук слабких місць, робота з прибутковістю,
+        клієнтським потоком та ефективністю команди.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="service-number">
+        03 / МАРКЕТИНГ
+      </div>
+
+      <h3>
+        Маркетинг та залучення клієнтів
+      </h3>
+
+      <p>
+        Позиціонування, канали залучення,
+        рекламна стратегія, робота з повторними
+        візитами та системою утримання клієнтів.
+      </p>
+
+    </div>
+
+
+    <div class="service">
+
+      <div class="service-number">
+        04 / УПРАВЛІННЯ
+      </div>
+
+      <h3>
+        Управління салоном
+      </h3>
+
+      <p>
+        Організація роботи, команда,
+        стандарти, контроль показників,
+        управлінські процеси та система роботи власника.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- AUDIENCE -->
+
+<div class="container">
+
+  <h2 class="section-title">
+    Для кого
+  </h2>
+
+  <div class="audience">
+
+    <div class="audience-block">
+
+      <h3>
+        Якщо ви плануєте відкрити салон
+      </h3>
+
+      <p>
+        Допоможу системно пройти шлях від ідеї
+        та концепції до відкриття й перших клієнтів,
+        не витрачаючи бюджет на хаотичні рішення.
+      </p>
+
+    </div>
+
+
+    <div class="audience-block">
+
+      <h3>
+        Якщо салон уже працює
+      </h3>
+
+      <p>
+        Розберемо поточну модель бізнесу,
+        знайдемо точки втрат та визначимо,
+        що потрібно змінити для подальшого розвитку.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<div class="container">
+
+  <div class="about">
+
+    <div class="about-photo">
+
+      <!--
+        СЮДА БУДЕТ ФОТО ЛЮДМИЛЫ
+
+        Когда загрузишь фото в GitHub,
+        назови его:
+
+        liudmyla_lander.jpg
+
+        После этого код ниже будет его показывать.
+      -->
+
+      <img
+        src="liudmyla_lander.jpg"
+        alt="Людмила Ландер"
+      >
+
+    </div>
+
+
+    <div>
+
+      <h2>
+        Про мене
+      </h2>
+
+      <p>
+        Мене звати <strong>Людмила Ландер</strong>.
+        Я консультант з розвитку та управління
+        салонами краси.
+      </p>
+
+      <p>
+        Допомагаю власникам розібратися не лише
+        у зовнішній стороні бізнесу, а й у його
+        внутрішній системі: клієнтах, команді,
+        маркетингу, процесах та управлінні.
+      </p>
+
+      <p>
+        Працюю як із новими проєктами,
+        які тільки готуються до відкриття,
+        так і з діючими салонами, які хочуть
+        перейти на наступний рівень розвитку.
+      </p>
+
+      <p>
+        Мета консалтингу — не дати набір загальних
+        порад, а допомогти власнику побудувати
+        зрозумілу систему, якою можна керувати.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- PROCESS -->
+
+<div class="container">
+
+  <h2 class="section-title">
+    Як ми працюємо
+  </h2>
+
+  <div class="process">
+
+    <div class="process-item">
+
+      <strong>
+        Крок 1. Аналіз
+      </strong>
+
+      <p>
+        Вивчаємо ситуацію, цілі власника,
+        поточну модель бізнесу та ключові проблеми.
+      </p>
+
+    </div>
+
+
+    <div class="process-item">
+
+      <strong>
+        Крок 2. Стратегія
+      </strong>
+
+      <p>
+        Формуємо конкретний план розвитку
+        з урахуванням ресурсів, бюджету
+        та реальної ситуації.
+      </p>
+
+    </div>
+
+
+    <div class="process-item">
+
+      <strong>
+        Крок 3. Впровадження
+      </strong>
+
+      <p>
+        Перетворюємо стратегію на конкретні
+        дії та допомагаємо вибудувати систему.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="container" id="contact">
+
+  <div class="contact">
+
+    <h2>
+      Готові розібрати ваш салон?
+    </h2>
+
+    <p>
+      Зв'яжіться зі мною напряму,
+      щоб обговорити вашу ситуацію.
+    </p>
+
+    <!--
+      ТУТ ПОТІМ ПОСТАВИМО СПРАВЖНІЙ НОМЕР ЛЮДМИЛИ
+    -->
+
+    <p>
+      📞
+      <a href="tel:+380000000000">
+        +38 (000) 000-00-00
+      </a>
+    </p>
+
+  </div>
+
+
+  <div class="footer">
+
+    <a
+      href="oferta.pdf"
+      target="_blank"
+      rel="noopener"
+    >
+      Публічна оферта
+    </a>
+
+    · Консультаційні послуги
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
